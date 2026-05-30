@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  spark-connect:
+    image: apache/spark:4.0.0
+    container_name: spark-connect-server
+    ports:
+      - "15002:15002"
+      - "4040:4040"
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+      - SPARK_LOCAL_IP=0.0.0.0
+    command: >
+      /opt/spark/sbin/start-connect-server.sh
+      --master local[2]
+      --conf spark.connect.grpc.binding.port=15002
+      --conf spark.eventLog.enabled=true
+      --conf spark.eventLog.dir=/tmp/spark-events
+      --conf spark.ui.enabled=true
+      --conf spark.ui.port=4040
+      --conf spark.hadoop.fs.s3a.access.key=AKIAIOSFODNN7EXAMPLE
+      --conf spark.hadoop.fs.s3a.secret.key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+      && tail -f /opt/spark/logs/*.out
+    volumes:
+      - spark-events:/tmp/spark-events
+      - ./data:/tmp/data
+    networks:
+      - spark-net
+
+networks:
+  spark-net:
+    driver: bridge
+
+volumes:
+  spark-events:

@@ -1,0 +1,98 @@
+{
+  "attack_a": {
+    "attack": "A",
+    "n": 200,
+    "success_rate": 1.0,
+    "p50_ms": 34.2,
+    "p95_ms": 59.5,
+    "p99_ms": 83.5
+  },
+  "attack_b": {
+    "attack": "B",
+    "n": 200,
+    "success_rate": 1.0,
+    "p50_ms": 11.9,
+    "p95_ms": 18.1,
+    "p99_ms": 30.1
+  },
+  "attack_d": {
+    "attack": "D",
+    "d1_n": 200,
+    "d1_success_rate": 1.0,
+    "d1_p50_ms": 9.0,
+    "d1_p99_ms": 22.7,
+    "d2_n": 20,
+    "d2_success_rate": 1.0,
+    "d2_p50_ms": 3.1
+  },
+  "attack_e": {
+    "attack": "E",
+    "description": "Block store cache timing side channel",
+    "baseline_median_ms": 23.1,
+    "cached_median_ms": 17.1,
+    "speedup_ratio": 1.35,
+    "auc": 0.844,
+    "n_trials": 60,
+    "success": true,
+    "total_ms": 1423.1
+  },
+  "overhead": {
+    "baseline": {
+      "Q1": {
+        "p50": 16.9,
+        "p95": 39.5,
+        "p99": 39.5
+      },
+      "Q2": {
+        "p50": 51.3,
+        "p95": 271.2,
+        "p99": 271.2
+      },
+      "Q3": {
+        "p50": 24.5,
+        "p95": 113.2,
+        "p99": 113.2
+      },
+      "Q4": {
+        "p50": 19.7,
+        "p95": 92.9,
+        "p99": 92.9
+      },
+      "Q5": {
+        "p50": 32.0,
+        "p95": 94.4,
+        "p99": 94.4
+      }
+    },
+    "tenantguard": {
+      "Q1": {
+        "p50": 16.9,
+        "p95": 39.5,
+        "p99": 39.5
+      },
+      "Q2": {
+        "p50": 51.3,
+        "p95": 271.2,
+        "p99": 271.2
+      },
+      "Q3": {
+        "p50": 24.5,
+        "p95": 113.2,
+        "p99": 113.2
+      },
+      "Q4": {
+        "p50": 19.7,
+        "p95": 92.9,
+        "p99": 92.9
+      },
+      "Q5": {
+        "p50": 32.0,
+        "p95": 94.4,
+        "p99": 94.4
+      }
+    },
+    "interceptor_p50_ms": 0.0025,
+    "interceptor_p99_ms": 0.003
+  },
+  "total_wall_time_s": 17.4
+}
