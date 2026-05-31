@@ -1,10 +1,5 @@
 # TenantGuard: Security Analysis of Apache Spark Connect
 
-Proof-of-concept attack scripts and benchmark for the paper:
-
-> **TenantGuard: A Security Analysis of Multi-tenancy Isolation Failures in Apache Spark Connect**  
-> Srujan Kumar Gandla — srujankgandla@ieee.org
-
 ---
 
 ## Overview
